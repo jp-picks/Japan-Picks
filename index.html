@@ -4,89 +4,121 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>おすすめの厳選情報 | Japan Product Deals</title>
+
+  <!-- Social Media Card Preview for X (Twitter) -->
+  <meta property="og:title" content="【Amazon公式】ビオレ おうちdeエステ ディープクレイ洗顔">
+  <meta property="og:description" content="毛穴の黒ずみ汚れ・隠れ角栓まで分解＆吸着！つるんとした毛穴レス肌へ導く話題のディープクレイ洗顔。">
+  <meta property="og:image" content="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/51kmyQUKzPL._AC_SL1000_.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
   <style>
-    :root {
-      --primary: #232f3e;
-      --accent: #ff9900;
-      --bg: #f3f3f3;
-      --card-bg: #ffffff;
-      --text: #0f1111;
-      --subtext: #565959;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f3f3f3;
+      margin: 0;
+      padding: 16px;
+      color: #0f1111;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-    body { background-color: var(--bg); color: var(--text); padding-bottom: 40px; }
-    header { background: var(--primary); color: white; padding: 15px 20px; text-align: center; }
-    header h1 { font-size: 1.2rem; font-weight: 600; }
-    header p { font-size: 0.8rem; color: #ccc; margin-top: 4px; }
-    .container { max-width: 600px; margin: 20px auto; padding: 0 15px; }
-    .disclosure { background: #fff8e7; border: 1px solid #ffe0b2; padding: 10px; border-radius: 6px; font-size: 0.75rem; color: #666; margin-bottom: 20px; line-height: 1.4; }
-    .product-card { background: var(--card-bg); border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; margin-bottom: 20px; }
-    .product-image { width: 100%; max-height: 250px; object-fit: contain; border-radius: 6px; margin-bottom: 15px; }
-    .product-title { font-size: 1.1rem; font-weight: bold; margin-bottom: 10px; color: var(--text); text-align: left; }
-    .product-desc { font-size: 0.85rem; color: var(--subtext); margin-bottom: 15px; text-align: left; line-height: 1.5; }
-    .buy-btn { display: block; width: 100%; background: var(--accent); color: #111; text-decoration: none; font-weight: bold; padding: 14px; border-radius: 25px; font-size: 1rem; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: background 0.2s; }
-    .buy-btn:active { background: #e68a00; }
-    .settings-box { background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.85rem; }
-    .settings-box label { font-weight: bold; display: block; margin-bottom: 5px; }
-    .settings-box input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; }
-    .settings-box button { background: var(--primary); color: white; border: none; padding: 8px 12px; border-radius: 4px; width: 100%; font-weight: bold; cursor: pointer; }
-    footer { text-align: center; font-size: 0.75rem; color: var(--subtext); margin-top: 30px; }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      padding: 12px 0 20px;
+    }
+    .header h1 {
+      font-size: 1.3rem;
+      margin: 0 0 6px 0;
+      color: #111;
+    }
+    .disclosure {
+      font-size: 0.75rem;
+      color: #565959;
+      background: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border: 1px solid #e7e7e7;
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      max-height: 280px;
+      object-fit: contain;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .product-card h3 {
+      font-size: 1.05rem;
+      margin: 0 0 8px 0;
+      line-height: 1.4;
+    }
+    .product-card p {
+      font-size: 0.88rem;
+      color: #333;
+      margin: 0 0 16px 0;
+      line-height: 1.5;
+    }
+    .buy-btn {
+      display: block;
+      width: 100%;
+      background-color: #ffd814;
+      border: 1px solid #fcd200;
+      border-radius: 20px;
+      padding: 12px 0;
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: #0f1111;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(213,217,217,.5);
+    }
+    .buy-btn:active {
+      background-color: #f7ca00;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Japan Product Deals</h1>
-    <p>Amazon Japan 注目・おすすめ商品情報</p>
-  </header>
-
   <div class="container">
+    <div class="header">
+      <h1>Japan Product Picks</h1>
+    </div>
+
+    <!-- Hidden Associate Tag Input -->
+    <div style="display:none;">
+      <input type="text" id="tagInput" value="ibjapanstore-22">
+    </div>
+
     <div class="disclosure">
-      ※当サイトはAmazon.co.jpアソシエイトプログラムの参加者です。掲載リンクから商品を購入されると、当サイトに収益が発生する場合があります。
+      Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。商品価格や在庫状況は最新の情報をご確認ください。
     </div>
 
-    <!-- Tag Setup Form -->
-    <div class="settings-box">
-      <label for="tagInput">Amazon Japan Associate Tag:</label>
-      <input type="text" id="tagInput" placeholder="yourid-22" value="ibjapanstore-22">
-      <button onclick="saveTag()">Save Tag</button>
+    <!-- PRODUCT CARD -->
+    <div class="product-card" id="biore-clay">
+      <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/51kmyQUKzPL._AC_SL1000_.jpg" alt="ビオレ おうちdeエステ ディープクレイ洗顔">
+      <h3>ビオレ おうちdeエステ ディープクレイ洗顔 (角栓崩壊ブースト)</h3>
+      <p>SNSでバズり中の毛穴ケア洗顔！新開発の角栓崩壊技術で、小鼻の黒ずみ汚れや隠れ角栓までしっかり洗浄。ザラつきのないなめらかなつるん肌へ。</p>
+      <button class="buy-btn" onclick="redirectAmazon(event, 'B0GL776DRB')">Amazon.co.jp で詳細を見る</button>
     </div>
 
-    <!-- Product Card 1 -->
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Product" class="product-image">
-      <div class="product-title">Real La Rose Retitox Volume Fill Serum</div>
-      <div class="product-desc">SNSで話題のボリュームフィールセラム！お肌に潤いとハリを与える注目美容液。Amazonで詳細と最新価格をチェック。</div>
-      <a href="#" class="buy-btn" id="link-1" onclick="redirectAmazon(event, 'B08N5WRWNW')">Amazon.co.jp で詳細を見る</a>
-    </div>
-
-    <!-- Product Card 2 -->
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Product" class="product-image">
-      <div class="product-title">Sony WH-1000XM4 ノイズキャンセリング ヘッドホン</div>
-      <div class="product-desc">業界最高クラスのノイズキャンセリング性能。高音質で快適な装着感のワイヤレスヘッドホン。</div>
-      <a href="#" class="buy-btn" id="link-2" onclick="redirectAmazon(event, 'B08N5WRWNW')">Amazon.co.jp で詳細を見る</a>
-    </div>
-
-    <footer>
-      &copy; 2026 Japan Product Deals. All rights reserved.
-    </footer>
   </div>
 
   <script>
     function getTag() {
       return localStorage.getItem('amazonTag') || 'ibjapanstore-22';
     }
-
-    function saveTag() {
-      const tag = document.getElementById('tagInput').value.trim();
-      if(tag) {
-        localStorage.setItem('amazonTag', tag);
-        alert('Amazon Tag Saved: ' + tag);
-      }
-    }
-
-    document.getElementById('tagInput').value = getTag();
 
     function redirectAmazon(event, asin) {
       event.preventDefault();
