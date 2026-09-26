@@ -1,132 +1,107 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>おすすめの厳選情報 | Japan Product Deals</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated Open Graph Meta Tags for X/Twitter Preview -->
+    <meta property="og:title" content="【注目アイテム】CB JAPAN チョ小っと玉子焼き器 (mini pan)">
+    <meta property="og:description" content="1個の卵でキレイに作れる！小さくて便利なお弁当・一人暮らし向け玉子焼きフライパン。">
+    <meta property="og:image" content="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/41l+x9pQr2L._AC_SY879_.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="【注目アイテム】CB JAPAN チョ小っと玉子焼き器">
+    <meta name="twitter:description" content="1個の卵でキレイに作れる！小さくて便利なお弁当・一人暮らし向け玉子焼きフライパン。">
+    <meta name="twitter:image" content="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/41l+x9pQr2L._AC_SY879_.jpg">
 
-  <!-- Social Media Card Preview for X (Twitter) -->
-  <meta property="og:title" content="【注目アイテム】ビオレ おうちdeエステ ディープクレイ洗顔">
-  <meta property="og:description" content="毛穴の黒ずみ汚れ・隠れ角栓まで分解＆吸着！つるんとした毛穴レス肌へ導く話題のディープクレイ洗顔。">
-  <meta property="og:image" content="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/51kmyQUKzPL._AC_SL1000_.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #f3f3f3;
-      margin: 0;
-      padding: 16px;
-      color: #0f1111;
-    }
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .header {
-      text-align: center;
-      padding: 12px 0 20px;
-    }
-    .header h1 {
-      font-size: 1.3rem;
-      margin: 0 0 6px 0;
-      color: #111;
-    }
-    .disclosure {
-      font-size: 0.75rem;
-      color: #565959;
-      background: #fff;
-      padding: 10px 14px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-      margin-bottom: 16px;
-      line-height: 1.4;
-    }
-    .product-card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      border: 1px solid #e7e7e7;
-    }
-    .product-card img {
-      width: 100%;
-      height: auto;
-      max-height: 280px;
-      object-fit: contain;
-      border-radius: 8px;
-      margin-bottom: 12px;
-    }
-    .product-card h3 {
-      font-size: 1.05rem;
-      margin: 0 0 8px 0;
-      line-height: 1.4;
-    }
-    .product-card p {
-      font-size: 0.88rem;
-      color: #333;
-      margin: 0 0 16px 0;
-      line-height: 1.5;
-    }
-    .buy-btn {
-      display: block;
-      width: 100%;
-      background-color: #ffd814;
-      border: 1px solid #fcd200;
-      border-radius: 20px;
-      padding: 12px 0;
-      font-size: 0.95rem;
-      font-weight: bold;
-      color: #0f1111;
-      text-align: center;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 2px 5px rgba(213,217,217,.5);
-    }
-    .buy-btn:active {
-      background-color: #f7ca00;
-    }
-  </style>
+    <title>Japan Picks - 注目アイテム一覧</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 0 0 5px 0;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            max-height: 250px;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        .card h2 {
+            font-size: 1.1rem;
+            color: #222;
+            margin: 15px 0 10px 0;
+            line-height: 1.4;
+        }
+        .card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ff9900;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 14px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
+            box-shadow: 0 2px 6px rgba(255, 153, 0, 0.4);
+        }
+        .btn:hover {
+            background-color: #e68a00;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
     <div class="header">
-      <h1>Japan Product Picks</h1>
+        <h1>【注目アイテム】 Japan Picks</h1>
     </div>
 
-    <!-- Hidden Associate Tag Input -->
-    <div style="display:none;">
-      <input type="text" id="tagInput" value="ibjapanstore-22">
+    <!-- PRODUCT 1: CB JAPAN Tamagoyaki Pan (NEW) -->
+    <div class="card" id="tamagoyaki-pan">
+        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/41l+x9pQr2L._AC_SY879_.jpg" alt="CB JAPAN Copan Mini Tamagoyaki Pan">
+        <h2>CB JAPAN チョ小っと玉子焼き器 (mini pan)</h2>
+        <p>1個の卵でキレイに作れる！小さくて便利なお弁当・一人暮らし向け玉子焼きフライパン。</p>
+        <a href="https://www.amazon.co.jp/-/en/CB-Tamagoyaki-Fluorine-Interior-Chocotto/dp/B0CC8WCNNT?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">詳細を見る（Amazonでチェック）</a>
     </div>
 
-    <div class="disclosure">
-      Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。商品価格や在庫状況は最新の情報をご確認ください。
+    <!-- PRODUCT 2: Biore Deep Clay Facial Wash (PREVIOUS) -->
+    <div class="card" id="biore-wash">
+        <img src="https://m.media-amazon.com/images/I/61S2XG2Jm8L._AC_SL1500_.jpg" alt="Biore Ouchi de Este Deep Clay Facial Wash">
+        <h2>ビオレ おうちdeエステ 洗顔気泡 炭＆クレイ (150g)</h2>
+        <p>毛穴の黒ずみ汚れ・角栓をしっかり吸着洗浄！おうちで本格毛穴ケア。</p>
+        <a href="https://www.amazon.co.jp/dp/B0GL776DRB?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">詳細を見る（Amazonでチェック）</a>
     </div>
-
-    <!-- PRODUCT CARD -->
-    <div class="product-card" id="biore-clay">
-      <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/51kmyQUKzPL._AC_SL1000_.jpg" alt="ビオレ おうちdeエステ ディープクレイ洗顔">
-      <h3>ビオレ おうちdeエステ ディープクレイ洗顔 (角栓崩壊ブースト)</h3>
-      <p>SNSでバズり中の毛穴ケア洗顔！新開発の角栓崩壊技術で、小鼻の黒ずみ汚れや隠れ角栓までしっかり洗浄。ザラつきのないなめらかなつるん肌へ。</p>
-      <button class="buy-btn" onclick="redirectAmazon(event, 'B0GL776DRB')">Amazon.co.jp で詳細を見る</button>
-    </div>
-
-  </div>
-
-  <script>
-    function getTag() {
-      return localStorage.getItem('amazonTag') || 'ibjapanstore-22';
-    }
-
-    function redirectAmazon(event, asin) {
-      event.preventDefault();
-      const tag = getTag();
-      const targetUrl = `https://www.amazon.co.jp/dp/${asin}?tag=${tag}`;
-      window.location.href = targetUrl;
-    }
-  </script>
 
 </body>
 </html>
