@@ -35,34 +35,44 @@
             color: #333;
             margin: 0 0 5px 0;
         }
+        /* Grid Container for 2 Products Per Row */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            max-width: 800px;
+            width: 100%;
+        }
         .card {
             background: #ffffff;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            max-width: 400px;
-            width: 100%;
-            padding: 20px;
+            padding: 15px;
             box-sizing: border-box;
             text-align: center;
-            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .card img {
             max-width: 100%;
             height: auto;
-            max-height: 250px;
+            max-height: 180px;
             border-radius: 8px;
             object-fit: contain;
+            margin: 0 auto;
         }
         .card h2 {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #222;
-            margin: 15px 0 10px 0;
-            line-height: 1.4;
+            margin: 10px 0 8px 0;
+            line-height: 1.3;
         }
         .card p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            flex-grow: 1;
         }
         .btn {
             display: inline-block;
@@ -70,14 +80,34 @@
             color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            padding: 14px 24px;
-            border-radius: 25px;
-            font-size: 1rem;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
             transition: background-color 0.2s ease;
             box-shadow: 0 2px 6px rgba(255, 153, 0, 0.4);
         }
         .btn:hover {
             background-color: #e68a00;
+        }
+        /* Mobile adjustment for small screens */
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Keeps 2 columns on mobile; change to 1fr if text is too cramped */
+                gap: 10px;
+            }
+            .card {
+                padding: 10px;
+            }
+            .card h2 {
+                font-size: 0.9rem;
+            }
+            .card p {
+                font-size: 0.78rem;
+            }
+            .btn {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -87,76 +117,80 @@
         <h1>【注目アイテム】 Japan Picks</h1>
     </div>
 
-    <!-- PRODUCT 1: Celladix Triple Retinol Serum (NEWEST) -->
-    <div class="card" id="celladix-retinol">
-        <img src="https://jp-picks.github.io/Japan-Picks/13A3C5B5-FC4B-418B-B536-C1087564276F.jpeg" alt="Celladix Triple Retinol Keratin Serum">
-        <h2>Celladix (セラディックス) トリプルレチノール アンプル美容液</h2>
-        <p>気になる毛穴の目立ちやゴワつき・皮脂悩みに！トリプルレチノールで角質層まで浸透してツルツル肌へ整える人気美容液✨</p>
-        <a href="https://www.amazon.co.jp/-/en/Celladix-Official-Triple-Retinol-Keratin/dp/B0FL1M79HM?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">詳細を見る（Amazonでチェック）</a>
-    </div>
+    <div class="grid-container">
 
-    <!-- PRODUCT 2: Advanced Clinicals Retinol Cream -->
-    <div class="card" id="advanced-clinicals-retinol">
-        <img src="https://jp-picks.github.io/Japan-Picks/IMG_1608.jpeg" alt="Advanced Clinicals Retinol Cream">
-        <h2>アドバンスド クリニカルズ レチノール ファーミングクリーム</h2>
-        <p>大容量ポンプで使いやすさ抜群！お顔はもちろん全身のエイジングケア・乾燥対策に大人気のレチノール配合クリーム✨</p>
-        <a href="https://www.amazon.co.jp/%E3%80%90Official-Japan%E3%80%91Advanced-Clinicals-Advanced-Moisturizer/dp/B0DZ5STLMP?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">詳細を見る（Amazonでチェック）</a>
-    </div>
+        <!-- PRODUCT 1: Celladix Triple Retinol Serum (NEWEST) -->
+        <div class="card" id="celladix-retinol">
+            <img src="https://jp-picks.github.io/Japan-Picks/13A3C5B5-FC4B-418B-B536-C1087564276F.jpeg" alt="Celladix Triple Retinol Keratin Serum">
+            <h2>Celladix (セラディックス) トリプルレチノール アンプル美容液</h2>
+            <p>毛穴の目立ちや皮脂悩みに！角質層まで浸透してツルツル肌へ整える人気美容液✨</p>
+            <a href="https://www.amazon.co.jp/-/en/Celladix-Official-Triple-Retinol-Keratin/dp/B0FL1M79HM?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
+        </div>
 
-    <!-- PRODUCT 3: Sana Nameraka Honpo Eye Cream -->
-    <div class="card" id="nameraka-eye-cream">
-        <img src="https://jp-picks.github.io/Japan-Picks/IMG_1602.jpeg" alt="サナ なめらか本舗 リンクルアイクリーム N">
-        <h2>サナ なめらか本舗 リンクルアイクリーム N</h2>
-        <p>ピュアレチノール×豆乳発酵液で目元ふっくらハリ感！プチプラなのに本格ケアができる大人気アイクリーム✨</p>
-        <a href="https://www.amazon.co.jp/-/en/Nameraka-Honpo-Plumping-Amazon-Exclusive/dp/B0D53RFTYY?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">詳細を見る（Amazonでチェック）</a>
-    </div>
+        <!-- PRODUCT 2: Advanced Clinicals Retinol Cream -->
+        <div class="card" id="advanced-clinicals-retinol">
+            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1608.jpeg" alt="Advanced Clinicals Retinol Cream">
+            <h2>アドバンスド クリニカルズ レチノール ファーミングクリーム</h2>
+            <p>大容量ポンプで使いやすさ抜群！お顔〜全身のエイジングケア・乾燥対策に✨</p>
+            <a href="https://www.amazon.co.jp/%E3%80%90Official-Japan%E3%80%91Advanced-Clinicals-Advanced-Moisturizer/dp/B0DZ5STLMP?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
+        </div>
 
-    <!-- PRODUCT 4: Tiffany & Co. Eyeglasses Frame -->
-    <div class="card" id="tiffany-glasses">
-        <img src="https://jp-picks.github.io/Japan-Picks/IMG_1599.jpeg" alt="TIFFANY&Co. メガネフレーム TF2218D">
-        <h2>TIFFANY&Co. (ティファニー) メガネフレーム TF2218D</h2>
-        <p>さりげないティファニーブルーがおしゃれ！横顔まで上品に魅せる高級感あふれるメガネフレーム✨</p>
-        <a href="https://www.amazon.co.jp/TIFFANY-%E3%83%86%E3%82%A3%E3%83%95%E3%82%A1%E3%83%8B%E3%83%BC-%E3%83%A1%E3%82%AC%E3%83%8D%E3%83%95%E3%83%AE%E3%83%BC%E3%83%A0-TF2218D-%E3%83%86%E3%82%A3%E3%83%95%E3%82%A1%E3%83%8B%E3%83%BCT/dp/B0B2LFPFJ9?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">詳細を見る（Amazonでチェック）</a>
-    </div>
+        <!-- PRODUCT 3: Sana Nameraka Honpo Eye Cream -->
+        <div class="card" id="nameraka-eye-cream">
+            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1602.jpeg" alt="サナ なめらか本舗 リンクルアイクリーム N">
+            <h2>サナ なめらか本舗 リンクルアイクリーム N</h2>
+            <p>ピュアレチノール×豆乳発酵液で目元ふっくらハリ感！本格ケアアイクリーム✨</p>
+            <a href="https://www.amazon.co.jp/-/en/Nameraka-Honpo-Plumping-Amazon-Exclusive/dp/B0D53RFTYY?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
+        </div>
 
-    <!-- PRODUCT 5: OLENS Natural Glowy -->
-    <div class="card" id="olens-glowy">
-        <img src="https://jp-picks.github.io/Japan-Picks/IMG_1597.jpeg" alt="OLENS Natural Glowy">
-        <h2>OLENS (オーレンズ) ナチュラルグローイ</h2>
-        <p>ちゅるんとした水光感が可愛すぎる！自然なグラデーションで瞳にツヤと透明感をプラスする韓国人気カラコン✨</p>
-        <a href="https://www.amazon.co.jp/O-LENS/dp/B0GWMCC4NR?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">詳細を見る（Amazonでチェック）</a>
-    </div>
+        <!-- PRODUCT 4: Tiffany & Co. Eyeglasses Frame -->
+        <div class="card" id="tiffany-glasses">
+            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1599.jpeg" alt="TIFFANY&Co. メガネフレーム TF2218D">
+            <h2>TIFFANY&Co. メガネフレーム TF2218D</h2>
+            <p>さりげないティファニーブルーがおしゃれ！横顔まで上品に魅せるメガネフレーム✨</p>
+            <a href="https://www.amazon.co.jp/TIFFANY-%E3%83%86%E3%82%A3%E3%83%95%E3%82%A1%E3%83%8B%E3%83%BC-%E3%83%A1%E3%82%AC%E3%83%8D%E3%83%95%E3%83%AE%E3%83%BC%E3%83%A0-TF2218D-%E3%83%86%E3%82%A3%E3%83%95%E3%82%A1%E3%83%8B%E3%83%BCT/dp/B0B2LFPFJ9?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
+        </div>
 
-    <!-- PRODUCT 6: Menturm Q Ointment -->
-    <div class="card" id="menturm-q">
-        <img src="https://jp-picks.github.io/Japan-Picks/IMG_1595.jpeg" alt="近江兄弟社 メンタームQ軟膏 430g">
-        <h2>近江兄弟社 メンタームQ軟膏 (430g)</h2>
-        <p>肩こり、腰痛、筋肉痛、関節痛に！スーッとした爽快感でコリや痛みを和らげる大容量サイズ✨</p>
-        <a href="https://www.amazon.co.jp/%E8%BF%91%E6%B1%9F%E5%85%84%E5%BC%9F%E7%A4%BE-%E3%80%90%E7%AC%AC3%E9%A1%9E%E5%8C%BB%E8%96%AC%E5%93%81%E3%80%91%E3%83%A1%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%A0Q%E8%BB%9F%E8%86%8F-430g/dp/B001FMHUNW?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">詳細を見る（Amazonでチェック）</a>
-    </div>
+        <!-- PRODUCT 5: OLENS Natural Glowy -->
+        <div class="card" id="olens-glowy">
+            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1597.jpeg" alt="OLENS Natural Glowy">
+            <h2>OLENS (オーレンズ) ナチュラルグローイ</h2>
+            <p>ちゅるんとした水光感が可愛すぎる！自然なグラデーションでツヤと透明感をプラス✨</p>
+            <a href="https://www.amazon.co.jp/O-LENS/dp/B0GWMCC4NR?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
+        </div>
 
-    <!-- PRODUCT 7: LULUFUN Liquid Motion Timer -->
-    <div class="card" id="hourglass">
-        <img src="https://jp-picks.github.io/Japan-Picks/IMG_1593.jpeg" alt="LULUFUN Liquid Motion Timer">
-        <h2>LULUFUN 液体砂時計 (オイルタイマー)</h2>
-        <p>ポタポタ落ちるオイルの動きがキレイで癒やされる！デスクインテリアやプレゼントにも大人気✨</p>
-        <a href="https://www.amazon.co.jp/LULUFUN-Hourglass-Miscellaneous-Decoration-Christmas/dp/B0FPQXYCRY?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">詳細を見る（Amazonでチェック）</a>
-    </div>
+        <!-- PRODUCT 6: Menturm Q Ointment -->
+        <div class="card" id="menturm-q">
+            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1595.jpeg" alt="近江兄弟社 メンタームQ軟膏 430g">
+            <h2>近江兄弟社 メンタームQ軟膏 (430g)</h2>
+            <p>肩こり、腰痛、筋肉痛に！スーッとした爽快感でコリや痛みを和らげる大容量サイズ✨</p>
+            <a href="https://www.amazon.co.jp/%E8%BF%91%E6%B1%9F%E5%85%84%E5%BC%9F%E7%A4%BE-%E3%80%90%E7%AC%AC3%E9%A1%9E%E5%8C%BB%E8%96%AC%E5%93%81%E3%80%91%E3%83%A1%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%A0Q%E8%BB%9F%E8%86%8F-430g/dp/B001FMHUNW?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
+        </div>
 
-    <!-- PRODUCT 8: CB JAPAN Tamagoyaki Pan -->
-    <div class="card" id="tamagoyaki-pan">
-        <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/41l+x9pQr2L._AC_SY879_.jpg" alt="CB JAPAN Copan Mini Tamagoyaki Pan">
-        <h2>CB JAPAN チョ小っと玉子焼き器 (mini pan)</h2>
-        <p>1個の卵でキレイに作れる！小さくて便利なお弁当・一人暮らし向け玉子焼きフライパン。</p>
-        <a href="https://www.amazon.co.jp/-/en/CB-Tamagoyaki-Fluorine-Interior-Chocotto/dp/B0CC8WCNNT?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">詳細を見る（Amazonでチェック）</a>
-    </div>
+        <!-- PRODUCT 7: LULUFUN Liquid Motion Timer -->
+        <div class="card" id="hourglass">
+            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1593.jpeg" alt="LULUFUN Liquid Motion Timer">
+            <h2>LULUFUN 液体砂時計 (オイルタイマー)</h2>
+            <p>ポタポタ落ちるオイルの動きがキレイで癒やされる！デスクインテリアにも大人気✨</p>
+            <a href="https://www.amazon.co.jp/LULUFUN-Hourglass-Miscellaneous-Decoration-Christmas/dp/B0FPQXYCRY?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
+        </div>
 
-    <!-- PRODUCT 9: Biore Deep Clay Facial Wash -->
-    <div class="card" id="biore-wash">
-        <img src="https://m.media-amazon.com/images/I/51bE-5MAtBL._AC_SL1000_.jpg" alt="Biore Ouchi de Este Deep Clay Facial Wash">
-        <h2>ビオレ おうちdeエステ 洗顔気泡 炭＆クレイ (150g)</h2>
-        <p>毛穴の黒ずみ汚れ・角栓をしっかり吸着洗浄！おうちで本格毛穴ケア。</p>
-        <a href="https://www.amazon.co.jp/dp/B0GL776DRB?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">詳細を見る（Amazonでチェック）</a>
+        <!-- PRODUCT 8: CB JAPAN Tamagoyaki Pan -->
+        <div class="card" id="tamagoyaki-pan">
+            <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/41l+x9pQr2L._AC_SY879_.jpg" alt="CB JAPAN Copan Mini Tamagoyaki Pan">
+            <h2>CB JAPAN チョ小っと玉子焼き器 (mini pan)</h2>
+            <p>1個の卵でキレイに作れる！小さくて便利なお弁当・一人暮らし向けフライパン。</p>
+            <a href="https://www.amazon.co.jp/-/en/CB-Tamagoyaki-Fluorine-Interior-Chocotto/dp/B0CC8WCNNT?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
+        </div>
+
+        <!-- PRODUCT 9: Biore Deep Clay Facial Wash -->
+        <div class="card" id="biore-wash">
+            <img src="https://m.media-amazon.com/images/I/51bE-5MAtBL._AC_SL1000_.jpg" alt="Biore Ouchi de Este Deep Clay Facial Wash">
+            <h2>ビオレ おうちdeエステ 洗顔気泡 炭＆クレイ (150g)</h2>
+            <p>毛穴の黒ずみ汚れ・角栓をしっかり吸着洗浄！おうちで本格毛穴ケア。</p>
+            <a href="https://www.amazon.co.jp/dp/B0GL776DRB?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
+        </div>
+
     </div>
 
 </body>
