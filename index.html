@@ -3,227 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Open Graph Meta Tags for X/Twitter Preview -->
-    <meta property="og:title" content="【注目アイテム】by one sii シャンプーに混ぜる美容液 スムースリペアエッセンス">
-    <meta property="og:description" content="いつものシャンプーに混ぜるだけ！サロン発の新発想ヘアブースター。頭皮と髪の蓄積汚れをすっきり落として指通り滑らかなサラツヤ髪へ✨">
-    <meta property="og:image" content="https://japanpicks.shop/IMG_1620.jpeg">
+    <title>Japan Picks | Best Beauty & Skincare</title>
+    
+    <!-- Open Graph / X Social Preview Meta Tags -->
+    <meta property="og:title" content="Japan Picks | Recommended Beauty Products">
+    <meta property="og:description" content="Discover top-rated Japanese cosmetics, skincare, and hair care items.">
+    <meta property="og:image" content="https://japanpicks.shop/IMG_1626.jpeg">
+    <meta property="og:url" content="https://japanpicks.shop/">
     <meta property="og:type" content="website">
     
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【注目アイテム】by one sii シャンプーに混ぜる美容液 スムースリペアエッセンス">
-    <meta name="twitter:description" content="いつものシャンプーに混ぜるだけ！サロン発の新発想ヘアブースター。頭皮と髪の蓄積汚れをすっきり落として指通り滑らかなサラツヤ髪へ✨">
-    <meta name="twitter:image" content="https://japanpicks.shop/IMG_1620.jpeg">
+    <meta name="twitter:title" content="Japan Picks | Recommended Beauty Products">
+    <meta name="twitter:description" content="Discover top-rated Japanese cosmetics, skincare, and hair care items.">
+    <meta name="twitter:image" content="https://japanpicks.shop/IMG_1626.jpeg">
 
-    <title>Japan Picks - 注目アイテム一覧</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .header h1 {
-            font-size: 1.5rem;
-            color: #333;
-            margin: 0 0 5px 0;
-        }
-        /* Grid Container for 2 Products Per Row */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            max-width: 800px;
-            width: 100%;
-        }
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            padding: 15px;
+        * {
             box-sizing: border-box;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        .card img {
-            max-width: 100%;
-            height: auto;
-            max-height: 180px;
-            border-radius: 8px;
-            object-fit: contain;
+        body {
+            background-color: #f7f9fa;
+            color: #333;
+            padding: 16px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+        header h1 {
+            font-size: 24px;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+        header p {
+            font-size: 14px;
+            color: #666;
+        }
+        .container {
+            max-width: 900px;
             margin: 0 auto;
         }
-        .card h2 {
-            font-size: 1rem;
-            color: #222;
-            margin: 10px 0 8px 0;
-            line-height: 1.3;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
-        .card p {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 15px;
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid transparent;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+        .card-content {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
             flex-grow: 1;
         }
-        .btn {
-            display: inline-block;
+        .title {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.4;
+            margin-bottom: 8px;
+            color: #111;
+        }
+        .description {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+        .buy-btn {
+            display: block;
             background-color: #ff9900;
-            color: #ffffff;
+            color: #fff;
+            text-align: center;
             text-decoration: none;
             font-weight: bold;
-            padding: 10px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
             transition: background-color 0.2s ease;
-            box-shadow: 0 2px 6px rgba(255, 153, 0, 0.4);
         }
-        .btn:hover {
+        .buy-btn:hover {
             background-color: #e68a00;
         }
-        /* Mobile adjustment for small screens */
-        @media (max-width: 480px) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-            }
-            .card {
-                padding: 10px;
-            }
-            .card h2 {
-                font-size: 0.9rem;
-            }
-            .card p {
-                font-size: 0.78rem;
-            }
-            .btn {
-                padding: 8px 12px;
-                font-size: 0.8rem;
-            }
+        
+        /* Highlight Glow Effect for Target Anchor */
+        .highlight-target {
+            border: 2px solid #ff9900 !important;
+            box-shadow: 0 0 15px rgba(255, 153, 0, 0.4) !important;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>【注目アイテム】 Japan Picks</h1>
+    <header class="container">
+        <h1>Japan Picks 🛍️</h1>
+        <p>厳選されたおすすめの美容・スキンケアアイテムをご紹介</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+
+            <!-- Redence Azelaic Acid 18+ Serum -->
+            <div class="card" id="redence-azelaic-18">
+                <img src="IMG_1626.jpeg" alt="Redence アゼライン酸18 セラム">
+                <div class="card-content">
+                    <div class="title">Redence アゼライン酸18+ セラム 30ml</div>
+                    <div class="description">
+                        ニキビ・トラブル肌特化成分「アゼライン酸18.3%」を高配合！CICA・ナイアシンアミド・コラーゲンで角質＆毛穴ケア✨
+                    </div>
+                    <a href="https://www.amazon.co.jp/Exfoliate-Ingredients-Panthenol-Niacinamide-Collagen/dp/B0GWPHSKGL?crid=2J9OU2VJQ2ET4&dib=eyJ2IjoiMSJ9.6rcUCkINUNQAESuyjixW84fUlo3VeTfGhW2f9B_ZszzTDnKr0PwNRCmszMrj306n-51yJGqPLbWeUIyxPII-I7DUbx0skk2LJvGdWciVrjQu0WYOF8Ey7b2vtkLphYkvilg33AT5MrF49rhMJ2GesqHo4Ge8VvdAo8YBFjBD_byFZxsXtS-reGY2jmzQ3oH2e-04ajyzGAspHz8f8t4AwQ.oGlHzffVTCa-zMxJiV0nMfY2EErRQIQhy3GDCO7cr_k&dib_tag=se&keywords=redence+%E3%82%A2%E3%82%BC%E3%83%A9%E3%82%A4%E3%83%B3%E9%85%B818+%E3%82%BB%E3%83%A9%E3%83%A0&qid=1790765206&sprefix=redence%2Caps%2C964&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9waG9uZV9zZWFyY2hfYXRm&psc=1&linkCode=ll2&tag=ibjapanstore-22&linkId=ec9172319f744c6da4180a48c08d7814&ref_=as_li_ss_tl" 
+                       class="buy-btn" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Amazonで見る 🛒
+                    </a>
+                </div>
+            </div>
+
+            <!-- Existing Product: by one sii repair essence -->
+            <div class="card" id="byonesii-repair-essence">
+                <img src="IMG_1620.jpeg" alt="by one sii Smooth Booster">
+                <div class="card-content">
+                    <div class="title">by one sii スムースブースター 300g</div>
+                    <div class="description">
+                        いつものシャンプーに混ぜるだけ！髪質改善サロン監修の洗い流すヘアトリートメント✨
+                    </div>
+                    <a href="https://www.amazon.co.jp/by-one-sii-%E3%82%B9%E3%83%A0%E3%83%BC%E3%82%B9%E3%83%96%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC/dp/B0D1898V9G" 
+                       class="buy-btn" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Amazonで見る 🛒
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <div class="grid-container">
+    <!-- Smooth Deep Link Scroll & Highlight Handler -->
+    <script>
+        function scrollToTarget() {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                        targetElement.classList.add('highlight-target');
+                    }, 200);
+                }
+            }
+        }
 
-        <!-- PRODUCT 1: by one sii Repair Essence (NEWEST - TOP) -->
-        <div class="card" id="byonesii-repair-essence">
-            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1620.jpeg" alt="by one sii スムースリペアエッセンス">
-            <h2>by one sii シャンプーに混ぜる美容液 スムースリペアエッセンス</h2>
-            <p>いつものシャンプーに混ぜるだけ！サロン発の新発想ヘアブースター。頭皮と髪の蓄積汚れをリセットして指通りサラツヤに✨</p>
-            <a href="https://www.amazon.co.jp/gp/aw/d/B0CPFT58C9?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 2: Dove Body Scrub Cherry & Apricot -->
-        <div class="card" id="dove-scrub-cherry">
-            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1619.jpeg" alt="Dove クリーミーボディスクラブ さくら＆アプリコット">
-            <h2>ダヴ クリーミーボディスクラブ (さくら＆アプリコット)</h2>
-            <p>ホイップクリームのように濃密なスクラブで古い角質を優しくケア！さくらとアプリコットの華やかな香りでしっとりスベスベ肌へ✨</p>
-            <a href="https://www.amazon.co.jp/-/en/Dove-Cherry-Apricot-Exfoliation-Radiance/dp/B0CV3FNM7Y?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 3: MUJI Relaxing Head Scrub -->
-        <div class="card" id="muji-head-scrub">
-            <img src="https://jp-picks.github.io/Japan-Picks/A3D1C4A3-CD21-4DCC-A49B-4B3AC715192B.jpeg" alt="無印良品 植物発酵液 ヘッドスクラブ">
-            <h2>無印良品 植物発酵液 ヘッドスクラブ</h2>
-            <p>毛穴の詰まりや毛髪のベタつきをすっきりリフレッシュ！自然由来成分で優しくケアする話題の頭皮スクラブ✨</p>
-            <a href="https://www.amazon.co.jp/23003421-Plant-Fermentation-Fluid-Scrub/dp/B0GRGLFHMZ?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 4: Sana Nameraka Honpo Eye Cream -->
-        <div class="card" id="nameraka-eye-cream">
-            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1602.jpeg" alt="サナ なめらか本舗 リンクルアイクリーム N">
-            <h2>サナ なめらか本舗 リンクルアイクリーム N</h2>
-            <p>ピュアレチノール×豆乳発酵液で目元ふっくらハリ感！SNSで大バズり中の本格アイクリーム✨</p>
-            <a href="https://www.amazon.co.jp/-/en/Nameraka-Honpo-Plumping-Amazon-Exclusive/dp/B0D53RFTYY?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 5: Glico Strawberry Pocky -->
-        <div class="card" id="strawberry-pocky">
-            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1615.jpeg" alt="Glico Strawberry Pocky">
-            <h2>江崎グリコ つぶつぶいちごポッキー</h2>
-            <p>いちご果肉の甘酸っぱさと可愛いハート型プレッツェルが魅力！おやつやギフトにも大人気✨</p>
-            <a href="https://www.amazon.co.jp/Pocky-Strawberry-Individually-Chocolates-Valentines/dp/B0BS395L52?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 6: UNOVE Deep Damage Treatment EX -->
-        <div class="card" id="unove-treatment">
-            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1610.jpeg" alt="UNOVE Deep Damage Treatment EX">
-            <h2>UNOVE (アノブ) ディープダメージトリートメント EX (207ml)</h2>
-            <p>ハイダメージ毛・パサつきに！タンパク質を贅沢補給して指通りツルツルなサラツヤ髪へ✨</p>
-            <a href="https://www.amazon.co.jp/%E3%80%90Official%E3%80%91UNOVE-Damage-Treatment-207ml-Tender/dp/B09TG5ZD42?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 7: Celladix Triple Retinol Serum -->
-        <div class="card" id="celladix-retinol">
-            <img src="https://jp-picks.github.io/Japan-Picks/13A3C5B5-FC4B-418B-B536-C1087564276F.jpeg" alt="Celladix Triple Retinol Keratin Serum">
-            <h2>Celladix (セラディックス) トリプルレチノール アンプル美容液</h2>
-            <p>毛穴の目立ちや皮脂悩みに！角質層まで浸透してツルツル肌へ整える人気美容液✨</p>
-            <a href="https://www.amazon.co.jp/-/en/Celladix-Official-Triple-Retinol-Keratin/dp/B0FL1M79HM?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 8: Advanced Clinicals Retinol Cream -->
-        <div class="card" id="advanced-clinicals-retinol">
-            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1608.jpeg" alt="Advanced Clinicals Retinol Cream">
-            <h2>アドバンスド クリニカルズ レチノール ファーミングクリーム</h2>
-            <p>大容量ポンプで使いやすさ抜群！お顔〜全身のエイジングケア・乾燥対策に✨</p>
-            <a href="https://www.amazon.co.jp/%E3%80%90Official-Japan%E3%80%91Advanced-Clinicals-Advanced-Moisturizer/dp/B0DZ5STLMP?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 9: Tiffany & Co. Eyeglasses Frame -->
-        <div class="card" id="tiffany-glasses">
-            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1599.jpeg" alt="TIFFANY&Co. メガネフレーム TF2218D">
-            <h2>TIFFANY&Co. メガネフレーム TF2218D</h2>
-            <p>さりげないティファニーブルーがおしゃれ！横顔まで上品に魅せるメガネフレーム✨</p>
-            <a href="https://www.amazon.co.jp/TIFFANY-%E3%83%86%E3%82%A3%E3%83%95%E3%82%A1%E3%83%8B%E3%83%BC-%E3%83%A1%E3%82%AC%E3%83%8D%E3%83%95%E3%83%AE%E3%83%BC%E3%83%A0-TF2218D-%E3%83%86%E3%82%A3%E3%83%95%E3%82%A1%E3%83%8B%E3%83%BCT/dp/B0B2LFPFJ9?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 10: OLENS Natural Glowy -->
-        <div class="card" id="olens-glowy">
-            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1597.jpeg" alt="OLENS Natural Glowy">
-            <h2>OLENS (オーレンズ) ナチュラルグローイ</h2>
-            <p>ちゅるんとした水光感が可愛すぎる！自然なグラデーションでツヤと透明感をプラス✨</p>
-            <a href="https://www.amazon.co.jp/O-LENS/dp/B0GWMCC4NR?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 11: Menturm Q Ointment -->
-        <div class="card" id="menturm-q">
-            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1595.jpeg" alt="近江兄弟社 メンタームQ軟膏 430g">
-            <h2>近江兄弟社 メンタームQ軟膏 (430g)</h2>
-            <p>肩こり、腰痛、筋肉痛に！スーッとした爽快感でコリや痛みを和らげる大容量サイズ✨</p>
-            <a href="https://www.amazon.co.jp/%E8%BF%91%E6%B1%9F%E5%85%84%E5%BC%9F%E7%A4%BE-%E3%80%90%E7%AC%AC3%E9%A1%9E%E5%8C%BB%E8%96%AC%E5%93%81%E3%80%91%E3%83%A1%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%A0Q%E8%BB%9F%E8%86%8F-430g/dp/B001FMHUNW?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 12: LULUFUN Liquid Motion Timer -->
-        <div class="card" id="hourglass">
-            <img src="https://jp-picks.github.io/Japan-Picks/IMG_1593.jpeg" alt="LULUFUN Liquid Motion Timer">
-            <h2>LULUFUN 液体砂時計 (オイルタイマー)</h2>
-            <p>ポタポタ落ちるオイルの動きがキレイで癒やされる！デスクインテリアにも大人気✨</p>
-            <a href="https://www.amazon.co.jp/LULUFUN-Hourglass-Miscellaneous-Decoration-Christmas/dp/B0FPQXYCRY?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-        <!-- PRODUCT 13: CB JAPAN Tamagoyaki Pan -->
-        <div class="card" id="tamagoyaki-pan">
-            <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/41l+x9pQr2L._AC_SY879_.jpg" alt="CB JAPAN Copan Mini Tamagoyaki Pan">
-            <h2>CB JAPAN チョ小っと玉子焼き器 (mini pan)</h2>
-            <p>1個の卵でキレイに作れる！小さくて便利なお弁当・一人暮らし向けフライパン。</p>
-            <a href="https://www.amazon.co.jp/-/en/CB-Tamagoyaki-Fluorine-Interior-Chocotto/dp/B0CC8WCNNT?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック</a>
-        </div>
-
-    </div>
-
+        window.addEventListener('load', scrollToTarget);
+        window.addEventListener('hashchange', scrollToTarget);
+    </script>
 </body>
 </html>
