@@ -7,7 +7,7 @@
     <!-- Open Graph Meta Tags for X/Twitter Preview -->
     <meta property="og:title" content="ラディアンヌ 盛りドレス ブラ ストラップレス | Japan Picks">
     <meta property="og:description" content="肩出し服やオフショルに最適！ずり落ちない補正ストラップレスブラ✨しっかりバストを盛れて、きれいな谷間＆シルエットをキープ！">
-    <meta property="og:image" content="https://japanpicks.shop/IMG_1707.jpeg">
+    <meta property="og:image" content="https://japanpicks.shop/IMG_1707.jpeg?v=1">
     <meta property="og:url" content="https://japanpicks.shop/">
     <meta property="og:type" content="website">
     
@@ -15,7 +15,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ラディアンヌ 盛りドレス ブラ ストラップレス | Japan Picks">
     <meta name="twitter:description" content="肩出し服やオフショルに最適！ずり落ちない補正ストラップレスブラ✨しっかりバストを盛れて、きれいな谷間＆シルエットをキープ！">
-    <meta name="twitter:image" content="https://japanpicks.shop/IMG_1707.jpeg">
+    <meta name="twitter:image" content="https://japanpicks.shop/IMG_1707.jpeg?v=1">
 
     <title>Japan Picks - 注目アイテム一覧</title>
     <style>
@@ -289,7 +289,7 @@
                 <a href="https://www.amazon.co.jp/-/en/Celladix-Official-Triple-Retinol-Keratin/dp/B0FL1M79HM?tag=ibjapanstore-22" class="btn" target="_blank" rel="noopener noreferrer">Amazonでチェック 🛒</a>
             </div>
 
-            <!-- PRODUCT 13: LIALUSTER Rose Retinol -->
+            <!-- PRODUCT 13: LIALUSTER Rose Retinol / Retitox -->
             <div class="card" id="lialuster-rose-retinol">
                 <img src="IMG_1642.jpeg" alt="LIALUSTER ローズレチノール">
                 <h2>LIALUSTER (リアラスター) ローズレチノール 美容液</h2>
@@ -431,22 +431,29 @@
     <!-- Script to Promote Direct Target to Top & Label Suggested Items Below -->
     <script>
         function organizePageForTarget() {
-            const hash = window.location.hash;
-            if (hash) {
-                const targetElement = document.querySelector(hash);
-                const featuredContainer = document.getElementById('featured-container');
-                const suggestedHeading = document.getElementById('suggested-heading');
+            let hash = window.location.hash.replace('#', '').trim();
+            if (!hash) return;
 
-                if (targetElement && featuredContainer) {
-                    // Move target product to the featured hero top section
-                    featuredContainer.appendChild(targetElement);
-                    suggestedHeading.style.display = 'block';
+            // Normalize alias for lialuster-rose-retitox vs lialuster-rose-retinol
+            if (hash === 'lialuster-rose-retitox' || hash === 'lialuster-retitox' || hash === 'lialuster-rose-retinol') {
+                hash = 'lialuster-rose-retinol';
+            }
 
-                    // Smooth scroll into view
-                    setTimeout(() => {
-                        featuredContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 150);
-                }
+            let targetElement = document.getElementById(hash);
+
+            const featuredContainer = document.getElementById('featured-container');
+            const suggestedHeading = document.getElementById('suggested-heading');
+
+            if (targetElement && featuredContainer) {
+                // Move target product into featured top hero section
+                featuredContainer.innerHTML = '';
+                featuredContainer.appendChild(targetElement);
+                suggestedHeading.style.display = 'block';
+
+                // Smooth scroll into view
+                setTimeout(() => {
+                    featuredContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 150);
             }
         }
 
